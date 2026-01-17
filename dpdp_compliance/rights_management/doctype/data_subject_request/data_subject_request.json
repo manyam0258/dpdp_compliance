@@ -1,0 +1,84 @@
+{
+    "actions": [],
+    "creation": "2025-01-17 14:10:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "data_principal",
+        "request_type",
+        "status",
+        "request_date",
+        "sla_deadline",
+        "description"
+    ],
+    "fields": [
+        {
+            "fieldname": "data_principal",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Data Principal",
+            "options": "User",
+            "reqd": 1
+        },
+        {
+            "fieldname": "request_type",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Request Type",
+            "options": "Access\nCorrection\nErasure\nWithdrawal",
+            "reqd": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Status",
+            "options": "Open\nIn Progress\nResolved\nRejected",
+            "default": "Open",
+            "reqd": 1
+        },
+        {
+            "fieldname": "request_date",
+            "fieldtype": "Date",
+            "label": "Request Date",
+            "default": "Today",
+            "reqd": 1
+        },
+        {
+            "fieldname": "sla_deadline",
+            "fieldtype": "Date",
+            "label": "SLA Deadline",
+            "read_only": 1
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Text Small",
+            "label": "Description"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2025-01-17 14:10:00.000000",
+    "modified_by": "Administrator",
+    "module": "Rights Management",
+    "name": "Data Subject Request",
+    "naming_rule": "Expression",
+    "autoname": "format:DSR-{YYYY}-{#####}",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+}

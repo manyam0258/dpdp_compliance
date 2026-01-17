@@ -1,0 +1,84 @@
+{
+    "actions": [],
+    "creation": "2025-01-17 14:10:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "data_principal",
+        "category",
+        "status",
+        "raised_on",
+        "resolution_deadline",
+        "description"
+    ],
+    "fields": [
+        {
+            "fieldname": "data_principal",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Data Principal",
+            "options": "User",
+            "reqd": 1
+        },
+        {
+            "fieldname": "category",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Category",
+            "options": "Consent Issue\nProcessing Issue\nRights Denial\nOther",
+            "reqd": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Status",
+            "options": "Open\nInvestigating\nResolved\nEscalated",
+            "default": "Open",
+            "reqd": 1
+        },
+        {
+            "fieldname": "raised_on",
+            "fieldtype": "Date",
+            "label": "Raised On",
+            "default": "Today",
+            "reqd": 1
+        },
+        {
+            "fieldname": "resolution_deadline",
+            "fieldtype": "Date",
+            "label": "Resolution Deadline (90 Days)",
+            "read_only": 1
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Text Small",
+            "label": "Description"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2025-01-17 14:10:00.000000",
+    "modified_by": "Administrator",
+    "module": "Rights Management",
+    "name": "Grievance Ticket",
+    "naming_rule": "Expression",
+    "autoname": "format:GRV-{YYYY}-{#####}",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+}

@@ -1,0 +1,55 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="py-5">
+    <div class="row">
+        <!-- Main Content: Privacy Notice -->
+        <div class="col-md-9 order-md-1">
+            <h1 class="mb-4">{{ title }}</h1>
+            <div class="card shadow-sm">
+                <div class="card-header bg-transparent">
+                    <h5 class="mb-0">Current Privacy Notice</h5>
+                </div>
+                <div class="card-body">
+                    {% if active_notice %}
+                    <div class="text-muted small mb-3">Version: {{ active_notice.version }}</div>
+                    <div class="privacy-content">
+                        {{ active_notice.content_html }}
+                    </div>
+                    {% else %}
+                    <div class="alert alert-warning">
+                        No active privacy notice found. Please contact the administrator.
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar: Actions -->
+        <div class="col-md-3 order-md-2">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-light">
+                    <h6 class="mb-0">Privacy Controls</h6>
+                </div>
+                <div class="list-group list-group-flush">
+                    <a href="/privacy/consents"
+                        class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                        Manage Consents
+                        <i class="fa fa-chevron-right text-muted small"></i>
+                    </a>
+                    <a href="/privacy/request"
+                        class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                        New Data Request
+                        <i class="fa fa-chevron-right text-muted small"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="alert alert-info small">
+                <i class="fa fa-shield mr-1"></i>
+                We are compliant with the <strong>DPDP Act 2023</strong>. Your data privacy is our priority.
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

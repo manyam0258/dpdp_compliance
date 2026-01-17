@@ -1,0 +1,125 @@
+{
+    "actions": [],
+    "creation": "2025-01-17 14:10:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "title",
+        "status",
+        "dpb_report_status",
+        "user_notification",
+        "section_break_1",
+        "incident_time",
+        "discovery_time",
+        "reporting_deadline",
+        "column_break_1",
+        "affected_principals",
+        "nature_of_breach",
+        "impact_assessment",
+        "mitigation_steps"
+    ],
+    "fields": [
+        {
+            "fieldname": "title",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Title",
+            "reqd": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Internal Status",
+            "options": "Open\nInvestigating\nContained\nClosed",
+            "default": "Open",
+            "reqd": 1
+        },
+        {
+            "fieldname": "dpb_report_status",
+            "fieldtype": "Select",
+            "label": "DPB Report Status",
+            "options": "Pending\nIntimation Sent\nFinal Report Sent",
+            "default": "Pending"
+        },
+        {
+            "fieldname": "user_notification",
+            "fieldtype": "Select",
+            "label": "User Notification",
+            "options": "Not Required\nPending\nSent",
+            "default": "Pending"
+        },
+        {
+            "fieldname": "section_break_1",
+            "fieldtype": "Section Break",
+            "label": "Timeline"
+        },
+        {
+            "fieldname": "incident_time",
+            "fieldtype": "Datetime",
+            "label": "Incident Time",
+            "reqd": 1
+        },
+        {
+            "fieldname": "discovery_time",
+            "fieldtype": "Datetime",
+            "label": "Discovery Time",
+            "reqd": 1
+        },
+        {
+            "fieldname": "reporting_deadline",
+            "fieldtype": "Datetime",
+            "label": "Reporting Deadline (72h)",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "affected_principals",
+            "fieldtype": "Int",
+            "label": "Affected Data Principals"
+        },
+        {
+            "fieldname": "nature_of_breach",
+            "fieldtype": "Text Small",
+            "label": "Nature of Breach"
+        },
+        {
+            "fieldname": "impact_assessment",
+            "fieldtype": "Text",
+            "label": "Impact Assessment"
+        },
+        {
+            "fieldname": "mitigation_steps",
+            "fieldtype": "Text",
+            "label": "Mitigation Steps"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2025-01-17 14:10:00.000000",
+    "modified_by": "Administrator",
+    "module": "Breach Management",
+    "name": "Personal Data Breach",
+    "naming_rule": "Expression",
+    "autoname": "format:BR-{YYYY}-{#####}",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+}

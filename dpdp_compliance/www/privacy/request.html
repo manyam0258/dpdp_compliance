@@ -1,0 +1,89 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>New Data Request</h2>
+                <a href="/privacy" class="btn btn-outline-secondary btn-sm">
+                    <i class="fa fa-arrow-left"></i> Back
+                </a>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <p class="text-muted mb-4">
+                        Exercise your rights under the <strong>Digital Personal Data Protection Act, 2023</strong>.
+                        We request that you provide specific details to help us fulfill your request efficiently.
+                    </p>
+
+                    <form id="dsr-form">
+                        <div class="mb-3">
+                            <label for="request_type" class="form-label fw-bold">Request Type</label>
+                            <select class="form-select" id="request_type" required>
+                                <option value="" disabled selected>Select a request type...</option>
+                                <option value="Access">Right to Access (Get a copy of my data)</option>
+                                <option value="Correction">Right to Correction (Update inaccurate data)</option>
+                                <option value="Erasure">Right to Erasure (Delete my data)</option>
+                                <option value="Withdrawal">Withdraw Consent (General)</option>
+                            </select>
+                            <div class="form-text">Select the primary reason for your request.</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="description" class="form-label fw-bold">Description / Details</label>
+                            <textarea class="form-control" id="description" rows="5" required
+                                placeholder="Please provide specific details. For 'Correction', specify the old and new values."></textarea>
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="button" class="btn btn-primary px-4" onclick="submitDSR()">
+                                <i class="fa fa-paper-plane mr-1"></i> Submit Request
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function submitDSR() {
+        const type = $('#request_type').val();
+        const desc = $('#description').val();
+
+        if (!type) {
+            frappe.msgprint("Please select a Request Type.");
+            return;
+        }
+        if (!desc) {
+            frappe.msgprint("Please provide a description.");
+            return;
+        }
+
+        frappe.call({
+            method: "dpdp_compliance.api.create_dsr",
+            args: {
+                request_type: type,
+                description: desc
+            },
+            freeze: true,
+            freeze_message: "Submitting Request...",
+            callback: function (r) {
+                if (!r.exc) {
+                    frappe.msgprint({
+                        title: "Request Submitted",
+                        message: "Your request <b>" + r.message.name + "</b> has been logged.<br>Our Data Protection Officer will review it shortly.",
+                        indicator: "green"
+                    });
+                    // Clear form
+                    $('#dsr-form')[0].reset();
+                    setTimeout(() => window.location.href = "/privacy", 3000);
+                }
+            }
+        });
+    }
+</script>
+{% endblock %}

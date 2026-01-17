@@ -1,0 +1,77 @@
+{
+    "actions": [],
+    "creation": "2025-01-17 14:10:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "title",
+        "assessment_date",
+        "dpo_approval",
+        "section_break_1",
+        "process_description",
+        "mitigation_strategies"
+    ],
+    "fields": [
+        {
+            "fieldname": "title",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Title",
+            "reqd": 1
+        },
+        {
+            "fieldname": "assessment_date",
+            "fieldtype": "Date",
+            "label": "Assessment Date",
+            "default": "Today",
+            "reqd": 1
+        },
+        {
+            "fieldname": "dpo_approval",
+            "fieldtype": "Select",
+            "label": "DPO Approval",
+            "options": "Pending\nApproved\nRejected",
+            "default": "Pending"
+        },
+        {
+            "fieldname": "section_break_1",
+            "fieldtype": "Section Break",
+            "label": "Details"
+        },
+        {
+            "fieldname": "process_description",
+            "fieldtype": "Text",
+            "label": "Process Description"
+        },
+        {
+            "fieldname": "mitigation_strategies",
+            "fieldtype": "Text",
+            "label": "Mitigation Strategies"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2025-01-17 14:10:00.000000",
+    "modified_by": "Administrator",
+    "module": "Governance",
+    "name": "DPIA Assessment",
+    "naming_rule": "Expression",
+    "autoname": "format:DPIA-{YYYY}-{#####}",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+}

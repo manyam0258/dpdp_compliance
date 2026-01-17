@@ -1,0 +1,86 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>My Consents</h2>
+        <a href="/privacy" class="btn btn-outline-secondary btn-sm">
+            <i class="fa fa-arrow-left"></i> Back to Portal
+        </a>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead class="bg-light">
+                        <tr>
+                            <th class="border-top-0">Date</th>
+                            <th class="border-top-0">Notice Reference</th>
+                            <th class="border-top-0">Status</th>
+                            <th class="border-top-0 text-end">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for consent in consents %}
+                        <tr>
+                            <td>{{ consent.consent_timestamp.strftime('%Y-%m-%d %H:%M') }}</td>
+                            <td>
+                                <span class="text-dark">{{ consent.privacy_notice_ref }}</span>
+                                <div class="small text-muted" title="Artifact Hash">ID: {{ consent.name }}</div>
+                            </td>
+                            <td>
+                                {% if consent.status == 'Active' %}
+                                <span class="badge bg-success">Active</span>
+                                {% else %}
+                                <span class="badge bg-secondary">{{ consent.status }}</span>
+                                {% endif %}
+                            </td>
+                            <td class="text-end">
+                                {% if consent.status == 'Active' %}
+                                <button class="btn btn-sm btn-outline-danger"
+                                    onclick="withdrawConsent('{{ consent.name }}')">
+                                    <i class="fa fa-ban"></i> Withdraw
+                                </button>
+                                {% else %}
+                                <span class="text-muted small">No actions</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td colspan="4" class="text-center py-5 text-muted">
+                                <i class="fa fa-info-circle mb-2"></i><br>
+                                No consent history found.
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function withdrawConsent(artifactName) {
+        frappe.confirm(
+            'Are you sure you want to withdraw this consent? This may affect services linked to this consent.',
+            () => {
+                frappe.call({
+                    method: "dpdp_compliance.api.withdraw_consent",
+                    args: { artifact_name: artifactName },
+                    freeze: true,
+                    freeze_message: "Processing Withdrawal...",
+                    callback: function (r) {
+                        if (!r.exc) {
+                            frappe.show_alert({ message: "Consent Withdrawn", indicator: "green" });
+                            setTimeout(() => location.reload(), 1500);
+                        }
+                    }
+                });
+            }
+        );
+    }
+</script>
+{% endblock %}

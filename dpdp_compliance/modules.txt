@@ -1,1 +1,5 @@
-DPDP Compliance
+Dpdp Compliance
+Consent Management
+Rights Management
+Breach Management
+Governance
