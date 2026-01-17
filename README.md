@@ -34,6 +34,10 @@ This app can use GitHub Actions for CI. The following workflows are configured:
 - CI: Installs this app and runs unit tests on every push to `develop` branch.
 - Linters: Runs [Frappe Semgrep Rules](https://github.com/frappe/semgrep-rules) and [pip-audit](https://pypi.org/project/pip-audit/) on every pull request.
 
+Document Reference: https://docs.google.com/document/d/1Wtc-5T5DdQOpP1iZiaOTebp5j_edY_jJhYx1nrEjHPI/edit?tab=t.0
+_________________________________________________
+
+
 
 ### License
 
