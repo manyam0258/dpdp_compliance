@@ -1,0 +1,32 @@
+{
+    "based_on": "status",
+    "chart_name": "DSR by Status",
+    "chart_type": "Donut",
+    "creation": "2024-01-18 10:00:00.000000",
+    "docstatus": 0,
+    "doctype": "Dashboard Chart",
+    "document_type": "Data Subject Request",
+    "filters_json": "[]",
+    "group_by_type": "Count",
+    "idx": 0,
+    "is_public": 1,
+    "is_standard": 1,
+    "modified": "2024-01-18 10:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Governance",
+    "name": "DSR by Status",
+    "owner": "Administrator",
+    "roles": [
+        {
+            "role": "System Manager"
+        },
+        {
+            "role": "Compliance Manager"
+        }
+    ],
+    "source": "Document Type",
+    "timespan": "Last Year",
+    "type": "Group By",
+    "use_report_chart": 0,
+    "value_based_on": ""
+}

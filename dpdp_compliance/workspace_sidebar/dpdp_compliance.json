@@ -1,0 +1,101 @@
+{
+ "app": "dpdp_compliance",
+ "creation": "2026-01-18 12:06:50.004349",
+ "docstatus": 0,
+ "doctype": "Workspace Sidebar",
+ "header_icon": "database-zap",
+ "idx": 0,
+ "items": [
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "book-open-text",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Consent Purpose",
+   "link_to": "Consent Purpose",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "list",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Privacy Notice",
+   "link_to": "Privacy Notice",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "list",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Consent Artifact",
+   "link_to": "Consent Artifact",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "list",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Grievance Ticket",
+   "link_to": "Grievance Ticket",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "list",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Personal Data Breach",
+   "link_to": "Personal Data Breach",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "list",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Data Processor",
+   "link_to": "Data Processor",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "list",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "DPIA Assessment",
+   "link_to": "DPIA Assessment",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-01-18 19:08:03.697335",
+ "modified_by": "Administrator",
+ "module": "Consent Management",
+ "name": "DPDP Compliance",
+ "owner": "Administrator",
+ "standard": 1,
+ "title": "DPDP Compliance"
+}

@@ -1,0 +1,26 @@
+{
+ "app": "dpdp_compliance",
+ "creation": "2026-01-18 14:04:14.849842",
+ "docstatus": 0,
+ "doctype": "Desktop Icon",
+ "hidden": 0,
+ "icon": "database-zap",
+ "icon_image": "/private/files/Gemini_Generated_Image_3d56ge3d56ge3d56.png",
+ "icon_type": "Link",
+ "idx": 0,
+ "label": "DPDP Compliance",
+ "link_to": "DPDP Compliance",
+ "link_type": "Workspace Sidebar",
+ "modified": "2026-01-18 14:11:31.100928",
+ "modified_by": "Administrator",
+ "name": "DPDP Compliance",
+ "owner": "Administrator",
+ "restrict_removal": 0,
+ "roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "sidebar": "DPDP Compliance",
+ "standard": 1
+}

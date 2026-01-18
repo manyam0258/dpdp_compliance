@@ -73,3 +73,50 @@ def get_active_notice(language="English"):
         as_dict=True,
     )
     return notice
+
+
+@frappe.whitelist()
+def get_my_data_dump():
+    """
+    Returns a comprehensive JSON dump of the logged-in user's data.
+    Fulfills Section 11 (Right to Access).
+    """
+    if not frappe.session.user or frappe.session.user == "Guest":
+        frappe.throw(_("Authentication required"), frappe.PermissionError)
+
+    user = frappe.session.user
+
+    # 1. Profile Data
+    user_doc = frappe.get_doc("User", user).as_dict()
+    # Remove sensitive/system fields
+    for field in ["password", "api_key", "api_secret", "reset_password_key"]:
+        if field in user_doc:
+            del user_doc[field]
+
+    # 2. Consents
+    consents = frappe.get_all(
+        "Consent Artifact",
+        filters={"data_principal": user},
+        fields=[
+            "name",
+            "privacy_notice_ref",
+            "consent_timestamp",
+            "status",
+            "artifact_hash",
+        ],
+    )
+
+    # 3. DSR History
+    dsrs = frappe.get_all(
+        "Data Subject Request",
+        filters={"data_principal": user},
+        fields=["name", "request_type", "status", "request_date", "description"],
+    )
+
+    return {
+        "generated_on": now_datetime(),
+        "user_profile": user_doc,
+        "consents": consents,
+        "data_subject_requests": dsrs,
+        "note": "Confidential. Generated via DPDP Compliance Portal.",
+    }

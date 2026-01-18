@@ -33,7 +33,7 @@
             "fieldtype": "Select",
             "in_list_view": 1,
             "label": "Status",
-            "options": "Open\nIn Progress\nResolved\nRejected",
+            "options": "Open\nIn Progress\nPending Erasure\nResolved\nRejected",
             "default": "Open",
             "reqd": 1
         },
@@ -52,7 +52,7 @@
         },
         {
             "fieldname": "description",
-            "fieldtype": "Text Small",
+            "fieldtype": "Small Text",
             "label": "Description"
         }
     ],
@@ -80,5 +80,6 @@
     ],
     "sort_field": "modified",
     "sort_order": "DESC",
+    "track_changes": 1,
     "states": []
 }

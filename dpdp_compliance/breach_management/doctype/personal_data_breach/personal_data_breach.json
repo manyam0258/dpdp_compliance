@@ -31,7 +31,7 @@
             "fieldtype": "Select",
             "in_list_view": 1,
             "label": "Internal Status",
-            "options": "Open\nInvestigating\nContained\nClosed",
+            "options": "Open\nInvestigating\nConfirmed\nContained\nClosed",
             "default": "Open",
             "reqd": 1
         },
@@ -121,5 +121,6 @@
     ],
     "sort_field": "modified",
     "sort_order": "DESC",
+    "track_changes": 1,
     "states": []
 }

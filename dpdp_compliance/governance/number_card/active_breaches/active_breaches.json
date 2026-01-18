@@ -1,0 +1,30 @@
+{
+    "chart_name": "Active Breaches",
+    "chart_type": "Number Card",
+    "creation": "2024-01-18 10:00:00.000000",
+    "docstatus": 0,
+    "doctype": "Number Card",
+    "document_type": "Personal Data Breach",
+    "filters_json": "[[\"Personal Data Breach\",\"status\",\"check\",\"Open\"]]",
+    "function": "Count",
+    "idx": 0,
+    "is_public": 1,
+    "is_standard": 1,
+    "label": "Active Breaches",
+    "modified": "2024-01-18 10:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Governance",
+    "name": "Active Breaches",
+    "owner": "Administrator",
+    "roles": [
+        {
+            "role": "System Manager"
+        },
+        {
+            "role": "Compliance Manager"
+        }
+    ],
+    "show_percentage_stats": 1,
+    "stats_time_interval": "Month",
+    "type": "Document Type"
+}

@@ -135,29 +135,37 @@ app_license = "gpl-3.0"
 doc_events = {
     "User": {
         "after_insert": "dpdp_compliance.consent_management.consent_controller.process_signup_consent"
-    }
+    },
+    "Data Subject Request": {
+        "before_save": "dpdp_compliance.utils.security_hooks.encrypt_fields",
+        "onload": "dpdp_compliance.utils.security_hooks.decrypt_fields",
+    },
+    "Personal Data Breach": {
+        "before_save": "dpdp_compliance.breach_management.utils.notify_breach"
+    },
 }
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"dpdp_compliance.tasks.all"
-# 	],
-# 	"daily": [
-# 		"dpdp_compliance.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"dpdp_compliance.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"dpdp_compliance.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"dpdp_compliance.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+    # 	"all": [
+    # 		"dpdp_compliance.tasks.all"
+    # 	],
+    "daily": [
+        "dpdp_compliance.tasks.daily",
+        "dpdp_compliance.rights_management.utils.process_erasure_queue",
+    ],
+    # 	"hourly": [
+    # 		"dpdp_compliance.tasks.hourly"
+    # 	],
+    # 	"weekly": [
+    # 		"dpdp_compliance.tasks.weekly"
+    # 	],
+    # 	"monthly": [
+    # 		"dpdp_compliance.tasks.monthly"
+    # 	],
+}
 
 # Testing
 # -------

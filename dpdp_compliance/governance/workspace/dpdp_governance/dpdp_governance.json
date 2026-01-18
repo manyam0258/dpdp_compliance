@@ -1,0 +1,70 @@
+{
+    "charts": [
+        {
+            "chart_name": "DSR by Status",
+            "label": "DSR by Status"
+        },
+        {
+            "chart_name": "Consent Trends",
+            "label": "Consent Trends"
+        }
+    ],
+    "creation": "2024-01-18 10:00:00.000000",
+    "docstatus": 0,
+    "doctype": "Workspace",
+    "icon": "policy",
+    "idx": 0,
+    "is_standard": 1,
+    "label": "DPDP Governance",
+    "links": [
+        {
+            "label": "Reports",
+            "type": "Card Break"
+        },
+        {
+            "label": "RoPA Report",
+            "link_to": "RoPA Report",
+            "link_type": "Report",
+            "type": "Link"
+        },
+        {
+            "label": "Masters",
+            "type": "Card Break",
+            "onboard": 1
+        },
+        {
+            "label": "Personal Data Breach",
+            "link_to": "Personal Data Breach",
+            "link_type": "DocType",
+            "type": "Link"
+        },
+        {
+            "label": "Data Subject Request",
+            "link_to": "Data Subject Request",
+            "link_type": "DocType",
+            "type": "Link"
+        }
+    ],
+    "modified": "2024-01-18 10:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Governance",
+    "name": "DPDP Governance",
+    "number_cards": [
+        {
+            "label": "Active Breaches",
+            "number_card_name": "Active Breaches"
+        }
+    ],
+    "owner": "Administrator",
+    "public": 1,
+    "roles": [
+        {
+            "role": "System Manager"
+        },
+        {
+            "role": "Compliance Manager"
+        }
+    ],
+    "shortcuts": [],
+    "title": "DPDP Governance"
+}
