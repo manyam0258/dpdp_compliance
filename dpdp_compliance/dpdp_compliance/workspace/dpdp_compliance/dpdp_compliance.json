@@ -1,205 +1,201 @@
 {
-    "charts": [],
-    "content": "[{\"id\":\"hero\",\"type\":\"hero\",\"data\":{\"title\":\"DPDP Compliance Cockpit\",\"subtitle\":\"Digital Personal Data Protection Act 2023 — Governance Dashboard\",\"show_confetti\":false}},{\"id\":\"shortcuts\",\"type\":\"shortcuts\",\"data\":{\"col\":12,\"shortcuts\":[{\"label\":\"DPDP Settings\",\"type\":\"doctype\",\"link_to\":\"DPDP Settings\",\"color\":\"#6366F1\",\"icon\":\"setting\"},{\"label\":\"Consent Logs\",\"type\":\"doctype\",\"link_to\":\"Consent Log\",\"color\":\"#10B981\",\"icon\":\"file\"},{\"label\":\"Data Subject Requests\",\"type\":\"doctype\",\"link_to\":\"Data Subject Request\",\"color\":\"#F59E0B\",\"icon\":\"list\"},{\"label\":\"Data Breaches\",\"type\":\"doctype\",\"link_to\":\"Data Breach\",\"color\":\"#EF4444\",\"icon\":\"alert-circle\"}]}},{\"id\":\"heading_governance\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h5\\\">Governance & Strategy</span>\",\"col\":12}},{\"id\":\"card_governance\",\"type\":\"card\",\"data\":{\"card_name\":\"Governance Documents\",\"col\":4,\"links\":[{\"label\":\"Data Assets (RoPA)\",\"type\":\"Link\",\"link_to\":\"Data Asset\"},{\"label\":\"Data Processors\",\"type\":\"Link\",\"link_to\":\"Data Processor\"},{\"label\":\"Retention Policies\",\"type\":\"Link\",\"link_to\":\"Retention Policy\"},{\"label\":\"Personal Data Categories\",\"type\":\"Link\",\"link_to\":\"Personal Data Category\"}]}},{\"id\":\"card_consents\",\"type\":\"card\",\"data\":{\"card_name\":\"Consent Framework\",\"col\":4,\"links\":[{\"label\":\"Consent Purposes\",\"type\":\"Link\",\"link_to\":\"Consent Purpose\"},{\"label\":\"Privacy Notices\",\"type\":\"Link\",\"link_to\":\"Privacy Notice\"},{\"label\":\"Consent Logs\",\"type\":\"Link\",\"link_to\":\"Consent Log\"}]}},{\"id\":\"card_ops\",\"type\":\"card\",\"data\":{\"card_name\":\"Operations & Audit\",\"col\":4,\"links\":[{\"label\":\"VPC Requests\",\"type\":\"Link\",\"link_to\":\"VPC Request\"},{\"label\":\"Erasure Logs\",\"type\":\"Link\",\"link_to\":\"Data Erasure Log\"},{\"label\":\"Nominee Records\",\"type\":\"Link\",\"link_to\":\"Nominee Record\"},{\"label\":\"DPDP Settings\",\"type\":\"Link\",\"link_to\":\"DPDP Settings\"}]}}]",
-    "creation": "2026-02-27 08:25:00.000000",
-    "custom_blocks": [],
-    "docstatus": 0,
-    "doctype": "Workspace",
-    "for_user": "",
-    "hide_custom": 0,
-    "icon": "shield",
-    "idx": 0,
-    "is_hidden": 0,
-    "label": "DPDP Compliance",
-    "links": [
-        {
-            "hidden": 0,
-            "is_query_report": 0,
-            "label": "Settings & Configuration",
-            "link_count": 0,
-            "link_type": "DocType",
-            "onboard": 0,
-            "type": "Card Break"
-        },
-        {
-            "hidden": 0,
-            "is_query_report": 0,
-            "label": "DPDP Settings",
-            "link_count": 0,
-            "link_to": "DPDP Settings",
-            "link_type": "DocType",
-            "onboard": 1,
-            "type": "Link"
-        },
-        {
-            "hidden": 0,
-            "is_query_report": 0,
-            "label": "Consent Purposes",
-            "link_count": 0,
-            "link_to": "Consent Purpose",
-            "link_type": "DocType",
-            "onboard": 0,
-            "type": "Link"
-        },
-        {
-            "hidden": 0,
-            "is_query_report": 0,
-            "label": "Privacy Notices",
-            "link_count": 0,
-            "link_to": "Privacy Notice",
-            "link_type": "DocType",
-            "onboard": 0,
-            "type": "Link"
-        },
-        {
-            "hidden": 0,
-            "is_query_report": 0,
-            "label": "Personal Data Categories",
-            "link_count": 0,
-            "link_to": "Personal Data Category",
-            "link_type": "DocType",
-            "onboard": 0,
-            "type": "Link"
-        },
-        {
-            "hidden": 0,
-            "is_query_report": 0,
-            "label": "Consent & Data Requests",
-            "link_count": 0,
-            "link_type": "DocType",
-            "onboard": 0,
-            "type": "Card Break"
-        },
-        {
-            "hidden": 0,
-            "is_query_report": 0,
-            "label": "Consent Logs",
-            "link_count": 0,
-            "link_to": "Consent Log",
-            "link_type": "DocType",
-            "onboard": 0,
-            "type": "Link"
-        },
-        {
-            "hidden": 0,
-            "is_query_report": 0,
-            "label": "Data Subject Requests",
-            "link_count": 0,
-            "link_to": "Data Subject Request",
-            "link_type": "DocType",
-            "onboard": 0,
-            "type": "Link"
-        },
-        {
-            "hidden": 0,
-            "is_query_report": 0,
-            "label": "Nominee Records",
-            "link_count": 0,
-            "link_to": "Nominee Record",
-            "link_type": "DocType",
-            "onboard": 0,
-            "type": "Link"
-        },
-        {
-            "hidden": 0,
-            "is_query_report": 0,
-            "label": "Breach & VPC",
-            "link_count": 0,
-            "link_type": "DocType",
-            "onboard": 0,
-            "type": "Card Break"
-        },
-        {
-            "hidden": 0,
-            "is_query_report": 0,
-            "label": "Data Breaches",
-            "link_count": 0,
-            "link_to": "Data Breach",
-            "link_type": "DocType",
-            "onboard": 0,
-            "type": "Link"
-        },
-        {
-            "hidden": 0,
-            "is_query_report": 0,
-            "label": "VPC Requests",
-            "link_count": 0,
-            "link_to": "VPC Request",
-            "link_type": "DocType",
-            "onboard": 0,
-            "type": "Link"
-        },
-        {
-            "hidden": 0,
-            "is_query_report": 0,
-            "label": "Governance & Compliance",
-            "link_count": 0,
-            "link_type": "DocType",
-            "onboard": 0,
-            "type": "Card Break"
-        },
-        {
-            "hidden": 0,
-            "is_query_report": 0,
-            "label": "Data Assets",
-            "link_count": 0,
-            "link_to": "Data Asset",
-            "link_type": "DocType",
-            "onboard": 0,
-            "type": "Link"
-        },
-        {
-            "hidden": 0,
-            "is_query_report": 0,
-            "label": "Data Processors",
-            "link_count": 0,
-            "link_to": "Data Processor",
-            "link_type": "DocType",
-            "onboard": 0,
-            "type": "Link"
-        },
-        {
-            "hidden": 0,
-            "is_query_report": 0,
-            "label": "Retention Policies",
-            "link_count": 0,
-            "link_to": "Retention Policy",
-            "link_type": "DocType",
-            "onboard": 0,
-            "type": "Link"
-        },
-        {
-            "hidden": 0,
-            "is_query_report": 0,
-            "label": "Data Erasure Logs",
-            "link_count": 0,
-            "link_to": "Data Erasure Log",
-            "link_type": "DocType",
-            "onboard": 0,
-            "type": "Link"
-        }
-    ],
-    "modified": "2026-02-27 08:25:00.000000",
-    "modified_by": "Administrator",
-    "module": "DPDP Compliance",
-    "name": "DPDP Compliance",
-    "owner": "Administrator",
-    "parent_page": "",
-    "public": 1,
-    "roles": [
-        {
-            "role": "DPO Manager"
-        },
-        {
-            "role": "DPDP Admin"
-        },
-        {
-            "role": "System Manager"
-        },
-        {
-            "role": "Compliance Viewer"
-        }
-    ],
-    "sequence_id": 100,
-    "title": "DPDP Compliance"
+ "app": "DPDP Compliance",
+ "charts": [],
+ "content": "[{\"id\":\"heading_governance\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h5\\\"><b>Data Governance</b></span>\",\"col\":12}},{\"id\":\"kfanHylEL9\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}},{\"id\":\"tHHEzFd7Ws\",\"type\":\"card\",\"data\":{\"card_name\":\"Transactions\",\"col\":4}},{\"id\":\"oHTRYwEu7k\",\"type\":\"card\",\"data\":{\"card_name\":\"Standard\",\"col\":4}},{\"id\":\"HQFIrMiHaB\",\"type\":\"paragraph\",\"data\":{\"text\":\"<br>\",\"col\":12}},{\"id\":\"hero\",\"type\":\"hero\",\"data\":{\"title\":\"DPDP Compliance Cockpit\",\"subtitle\":\"Digital Personal Data Protection Act 2023 \u2014 Governance Dashboard\",\"show_confetti\":false}},{\"id\":\"shortcuts\",\"type\":\"shortcuts\",\"data\":{\"col\":12,\"shortcuts\":[{\"label\":\"DPDP Settings\",\"type\":\"doctype\",\"link_to\":\"DPDP Settings\",\"color\":\"#6366F1\",\"icon\":\"setting\"},{\"label\":\"Consent Logs\",\"type\":\"doctype\",\"link_to\":\"Consent Log\",\"color\":\"#10B981\",\"icon\":\"file\"},{\"label\":\"Data Subject Requests\",\"type\":\"doctype\",\"link_to\":\"Data Subject Request\",\"color\":\"#F59E0B\",\"icon\":\"list\"},{\"label\":\"Data Breaches\",\"type\":\"doctype\",\"link_to\":\"Data Breach\",\"color\":\"#EF4444\",\"icon\":\"alert-circle\"},{\"label\":\"Privacy Notices\",\"type\":\"doctype\",\"link_to\":\"Privacy Notice\",\"color\":\"#8B5CF6\",\"icon\":\"edit\"},{\"label\":\"Consent Purposes\",\"type\":\"doctype\",\"link_to\":\"Consent Purpose\",\"color\":\"#06B6D4\",\"icon\":\"check-circle\"}]}},{\"id\":\"sc_governance\",\"type\":\"shortcuts\",\"data\":{\"col\":12,\"shortcuts\":[{\"label\":\"Data Assets\",\"type\":\"doctype\",\"link_to\":\"Data Asset\",\"color\":\"#3B82F6\"},{\"label\":\"Data Processors\",\"type\":\"doctype\",\"link_to\":\"Data Processor\",\"color\":\"#14B8A6\"},{\"label\":\"Retention Policies\",\"type\":\"doctype\",\"link_to\":\"Retention Policy\",\"color\":\"#A855F7\"},{\"label\":\"Personal Data Categories\",\"type\":\"doctype\",\"link_to\":\"Personal Data Category\",\"color\":\"#EC4899\"},{\"label\":\"Erasure Logs\",\"type\":\"doctype\",\"link_to\":\"Data Erasure Log\",\"color\":\"#F97316\"},{\"label\":\"VPC Requests\",\"type\":\"doctype\",\"link_to\":\"VPC Request\",\"color\":\"#84CC16\"}]}}]",
+ "creation": "2026-02-27 08:25:00",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "shield",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "DPDP Compliance",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Masters",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Data Assets",
+   "link_count": 0,
+   "link_to": "Data Asset",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Personal Data Category\t",
+   "link_count": 0,
+   "link_to": "Personal Data Category",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Data Processors",
+   "link_count": 0,
+   "link_to": "Data Processor",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Retention Policy",
+   "link_count": 0,
+   "link_to": "Retention Policy",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Transactions",
+   "link_count": 5,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Consent Purposes",
+   "link_count": 0,
+   "link_to": "Consent Purpose",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Privacy Notices",
+   "link_count": 0,
+   "link_to": "Privacy Notice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Consent Log",
+   "link_count": 0,
+   "link_to": "Consent Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Data Subject Request",
+   "link_count": 0,
+   "link_to": "Data Subject Request",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Data Breach",
+   "link_count": 0,
+   "link_to": "Data Breach",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Standard",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "VPC Requests",
+   "link_count": 0,
+   "link_to": "VPC Request",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Nominee Records",
+   "link_count": 0,
+   "link_to": "Nominee Record",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Data Erasure Logs",
+   "link_count": 0,
+   "link_to": "Data Erasure Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "DPDP Settings",
+   "link_count": 0,
+   "link_to": "DPDP Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-02-27 16:37:31.080501",
+ "modified_by": "Administrator",
+ "module": "DPDP Compliance",
+ "name": "DPDP Compliance",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "DPO Manager"
+  },
+  {
+   "role": "DPDP Admin"
+  },
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Compliance Viewer"
+  }
+ ],
+ "sequence_id": 12.0,
+ "shortcuts": [],
+ "title": "DPDP Compliance",
+ "type": "Workspace"
 }
