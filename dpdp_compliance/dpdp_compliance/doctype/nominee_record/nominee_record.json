@@ -1,0 +1,89 @@
+{
+    "actions": [],
+    "autoname": "format:NOM-{####}",
+    "creation": "2026-02-27 07:25:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "user",
+        "nominee_name",
+        "nominee_email",
+        "column_break_1",
+        "relationship",
+        "activation_condition",
+        "is_active"
+    ],
+    "fields": [
+        {
+            "fieldname": "user",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Data Principal",
+            "options": "User",
+            "reqd": 1
+        },
+        {
+            "fieldname": "nominee_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Nominee Full Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "nominee_email",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Nominee Email",
+            "options": "Email",
+            "reqd": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "relationship",
+            "fieldtype": "Data",
+            "label": "Relationship",
+            "reqd": 1
+        },
+        {
+            "fieldname": "activation_condition",
+            "fieldtype": "Select",
+            "label": "Activation Condition",
+            "options": "Death\nIncapacity\nEither",
+            "default": "Either"
+        },
+        {
+            "fieldname": "is_active",
+            "fieldtype": "Check",
+            "label": "Is Active",
+            "default": "1"
+        }
+    ],
+    "links": [],
+    "modified": "2026-02-27 07:25:00.000000",
+    "modified_by": "Administrator",
+    "module": "DPDP Compliance",
+    "name": "Nominee Record",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "read": 1,
+            "role": "System Manager",
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "read": 1,
+            "role": "DPO Manager",
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC"
+}

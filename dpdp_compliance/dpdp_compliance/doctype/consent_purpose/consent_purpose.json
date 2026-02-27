@@ -1,0 +1,108 @@
+{
+    "actions": [],
+    "autoname": "format:CP-{####}",
+    "creation": "2026-02-27 07:25:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "is_submittable": 1,
+    "field_order": [
+        "purpose_name",
+        "description",
+        "column_break_1",
+        "is_mandatory",
+        "is_active",
+        "validity_days",
+        "legal_section",
+        "lawful_basis"
+    ],
+    "fields": [
+        {
+            "fieldname": "purpose_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Purpose Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Text",
+            "label": "Description",
+            "reqd": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "is_mandatory",
+            "fieldtype": "Check",
+            "in_list_view": 1,
+            "label": "Is Mandatory",
+            "default": "0",
+            "description": "Mandatory consents are pre-checked and cannot be unchecked during signup"
+        },
+        {
+            "fieldname": "is_active",
+            "fieldtype": "Check",
+            "in_list_view": 1,
+            "label": "Is Active",
+            "default": "1"
+        },
+        {
+            "fieldname": "validity_days",
+            "fieldtype": "Int",
+            "label": "Validity (Days)",
+            "default": "365",
+            "description": "Number of days before consent expires and must be re-obtained"
+        },
+        {
+            "fieldname": "legal_section",
+            "fieldtype": "Section Break",
+            "label": "Legal Basis"
+        },
+        {
+            "fieldname": "lawful_basis",
+            "fieldtype": "Select",
+            "label": "Lawful Basis",
+            "options": "\nConsent\nLegitimate Use\nLegal Obligation\nVital Interest\nPublic Interest",
+            "default": "Consent"
+        }
+    ],
+    "links": [],
+    "modified": "2026-02-27 07:25:00.000000",
+    "modified_by": "Administrator",
+    "module": "DPDP Compliance",
+    "name": "Consent Purpose",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 0,
+            "read": 1,
+            "role": "System Manager",
+            "submit": 1,
+            "write": 1,
+            "amend": 1,
+            "cancel": 1
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "read": 1,
+            "role": "DPO Manager",
+            "submit": 1,
+            "write": 1,
+            "amend": 1,
+            "cancel": 1
+        },
+        {
+            "read": 1,
+            "role": "Compliance Viewer",
+            "write": 0
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

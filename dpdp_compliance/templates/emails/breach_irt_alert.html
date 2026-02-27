@@ -1,0 +1,41 @@
+<h3>Breach Alert — Incident Response Team</h3>
+
+<p>A new data breach has been detected and requires immediate attention.</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 16px 0;">
+    <tr>
+        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold; width: 200px;">Breach ID</td>
+        <td style="padding: 8px; border: 1px solid #ddd;">{{ breach_id }}</td>
+    </tr>
+    <tr>
+        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Title</td>
+        <td style="padding: 8px; border: 1px solid #ddd;">{{ breach_title }}</td>
+    </tr>
+    <tr>
+        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Severity</td>
+        <td
+            style="padding: 8px; border: 1px solid #ddd; color: {% if severity == 'Critical' %}red{% elif severity == 'High' %}orange{% else %}inherit{% endif %};">
+            <strong>{{ severity }}</strong>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Detection Time</td>
+        <td style="padding: 8px; border: 1px solid #ddd;">{{ detection_time }}</td>
+    </tr>
+    <tr>
+        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">DPB Reporting Deadline</td>
+        <td style="padding: 8px; border: 1px solid #ddd; color: red;">{{ reporting_deadline }}</td>
+    </tr>
+    <tr>
+        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Nature of Breach</td>
+        <td style="padding: 8px; border: 1px solid #ddd;">{{ nature_of_breach }}</td>
+    </tr>
+    <tr>
+        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Affected Users</td>
+        <td style="padding: 8px; border: 1px solid #ddd;">{{ affected_users_count }}</td>
+    </tr>
+</table>
+
+<p style="color: red; font-weight: bold;">
+    ⏰ You have 72 hours from detection to report this breach to the Data Protection Board (DPB).
+</p>

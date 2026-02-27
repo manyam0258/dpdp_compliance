@@ -1,0 +1,165 @@
+{
+    "actions": [],
+    "autoname": "format:CL-{YYYY}-{#####}",
+    "creation": "2026-02-27 07:25:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "is_submittable": 1,
+    "field_order": [
+        "user",
+        "purpose",
+        "status",
+        "column_break_1",
+        "timestamp",
+        "expiry_date",
+        "notice_section",
+        "notice_version",
+        "channel",
+        "metadata_section",
+        "ip_address",
+        "user_agent",
+        "column_break_meta",
+        "is_minor",
+        "parent_user",
+        "verification_token"
+    ],
+    "fields": [
+        {
+            "fieldname": "user",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "User",
+            "options": "User",
+            "reqd": 1
+        },
+        {
+            "fieldname": "purpose",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Purpose",
+            "options": "Consent Purpose",
+            "reqd": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Status",
+            "options": "Granted\nDenied\nWithdrawn\nExpired",
+            "reqd": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "timestamp",
+            "fieldtype": "Datetime",
+            "in_list_view": 1,
+            "label": "Timestamp",
+            "default": "Now",
+            "read_only": 1
+        },
+        {
+            "fieldname": "expiry_date",
+            "fieldtype": "Date",
+            "label": "Expiry Date"
+        },
+        {
+            "fieldname": "notice_section",
+            "fieldtype": "Section Break",
+            "label": "Notice & Channel"
+        },
+        {
+            "fieldname": "notice_version",
+            "fieldtype": "Link",
+            "label": "Privacy Notice Version",
+            "options": "Privacy Notice"
+        },
+        {
+            "fieldname": "channel",
+            "fieldtype": "Select",
+            "label": "Channel",
+            "options": "\nWeb\nAPI\nMobile\nEmail\nSystem",
+            "default": "Web"
+        },
+        {
+            "fieldname": "metadata_section",
+            "fieldtype": "Section Break",
+            "label": "Technical Metadata"
+        },
+        {
+            "fieldname": "ip_address",
+            "fieldtype": "Data",
+            "label": "IP Address",
+            "read_only": 1
+        },
+        {
+            "fieldname": "user_agent",
+            "fieldtype": "Small Text",
+            "label": "User Agent",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_meta",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "is_minor",
+            "fieldtype": "Check",
+            "label": "Is Minor",
+            "default": "0",
+            "read_only": 1
+        },
+        {
+            "fieldname": "parent_user",
+            "fieldtype": "Link",
+            "label": "Parent/Guardian User",
+            "options": "User",
+            "depends_on": "is_minor"
+        },
+        {
+            "fieldname": "verification_token",
+            "fieldtype": "Data",
+            "label": "Verification Token",
+            "read_only": 1,
+            "hidden": 1
+        }
+    ],
+    "links": [],
+    "modified": "2026-02-27 07:25:00.000000",
+    "modified_by": "Administrator",
+    "module": "DPDP Compliance",
+    "name": "Consent Log",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "read": 1,
+            "role": "System Manager",
+            "write": 0,
+            "create": 1,
+            "submit": 1,
+            "delete": 0,
+            "cancel": 0
+        },
+        {
+            "read": 1,
+            "role": "DPO Manager",
+            "write": 0,
+            "create": 1,
+            "submit": 1,
+            "delete": 0,
+            "cancel": 0
+        },
+        {
+            "read": 1,
+            "role": "Compliance Viewer",
+            "write": 0,
+            "delete": 0
+        }
+    ],
+    "sort_field": "timestamp",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

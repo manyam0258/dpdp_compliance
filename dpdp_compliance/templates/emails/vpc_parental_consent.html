@@ -1,0 +1,20 @@
+<h3>Parental Consent Required</h3>
+
+<p>Your child (<strong>{{ child_email }}</strong>) has registered on our platform. Under the Digital Personal Data
+    Protection (DPDP) Act 2023, Section 9, we require verifiable parental consent before processing a child's personal
+    data.</p>
+
+<p>Please click the link below to verify your identity and consent to data processing:</p>
+
+<p style="text-align: center; margin: 24px 0;">
+    <a href="{{ verification_url }}"
+        style="display: inline-block; padding: 12px 32px; background: #0070f0; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold;">
+        Verify &amp; Consent
+    </a>
+</p>
+
+<p style="color: #6c757d; font-size: 14px;">
+    This link expires on <strong>{{ expiry_date }}</strong>. After expiry, a new request must be initiated.
+</p>
+
+<p>If you did not expect this email, please contact our Data Protection Officer.</p>

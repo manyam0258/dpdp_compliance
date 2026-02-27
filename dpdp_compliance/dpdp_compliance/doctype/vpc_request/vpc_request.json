@@ -1,0 +1,83 @@
+{
+    "actions": [],
+    "autoname": "format:VPC-{####}",
+    "creation": "2026-02-27 07:25:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "child_user",
+        "parent_email",
+        "column_break_1",
+        "status",
+        "token",
+        "expiry"
+    ],
+    "fields": [
+        {
+            "fieldname": "child_user",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Child User",
+            "options": "User",
+            "reqd": 1
+        },
+        {
+            "fieldname": "parent_email",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Parent/Guardian Email",
+            "options": "Email",
+            "reqd": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Status",
+            "options": "Pending\nVerified\nExpired\nRejected",
+            "default": "Pending"
+        },
+        {
+            "fieldname": "token",
+            "fieldtype": "Data",
+            "label": "VPC Token",
+            "read_only": 1,
+            "hidden": 1
+        },
+        {
+            "fieldname": "expiry",
+            "fieldtype": "Datetime",
+            "label": "Expiry",
+            "read_only": 1
+        }
+    ],
+    "links": [],
+    "modified": "2026-02-27 07:25:00.000000",
+    "modified_by": "Administrator",
+    "module": "DPDP Compliance",
+    "name": "VPC Request",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 0,
+            "read": 1,
+            "role": "System Manager",
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "read": 1,
+            "role": "DPO Manager",
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC"
+}

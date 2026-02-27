@@ -1,0 +1,94 @@
+{
+    "actions": [],
+    "autoname": "format:DEL-{YYYY}-{#####}",
+    "creation": "2026-02-27 07:25:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "user",
+        "dsr_reference",
+        "column_break_1",
+        "executed_by",
+        "executed_on",
+        "anonymized_records_section",
+        "anonymized_records"
+    ],
+    "fields": [
+        {
+            "fieldname": "user",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Data Principal",
+            "options": "User",
+            "reqd": 1
+        },
+        {
+            "fieldname": "dsr_reference",
+            "fieldtype": "Link",
+            "label": "DSR Reference",
+            "options": "Data Subject Request"
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "executed_by",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Executed By",
+            "options": "User",
+            "read_only": 1
+        },
+        {
+            "fieldname": "executed_on",
+            "fieldtype": "Datetime",
+            "in_list_view": 1,
+            "label": "Executed On",
+            "default": "Now",
+            "read_only": 1
+        },
+        {
+            "fieldname": "anonymized_records_section",
+            "fieldtype": "Section Break",
+            "label": "Anonymized Records"
+        },
+        {
+            "fieldname": "anonymized_records",
+            "fieldtype": "Code",
+            "label": "Anonymized Records (JSON)",
+            "read_only": 1,
+            "options": "JSON"
+        }
+    ],
+    "links": [],
+    "modified": "2026-02-27 07:25:00.000000",
+    "modified_by": "Administrator",
+    "module": "DPDP Compliance",
+    "name": "Data Erasure Log",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 0,
+            "read": 1,
+            "role": "System Manager",
+            "write": 0
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "read": 1,
+            "role": "DPO Manager",
+            "write": 0
+        },
+        {
+            "read": 1,
+            "role": "Compliance Viewer",
+            "write": 0
+        }
+    ],
+    "sort_field": "executed_on",
+    "sort_order": "DESC"
+}

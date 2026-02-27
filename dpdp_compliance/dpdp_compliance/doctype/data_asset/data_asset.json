@@ -1,0 +1,125 @@
+{
+    "actions": [],
+    "autoname": "format:DA-{####}",
+    "creation": "2026-02-27 07:25:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "asset_name",
+        "doctype_name",
+        "field_name",
+        "column_break_1",
+        "classification",
+        "data_category",
+        "details_section",
+        "processing_purpose",
+        "storage_location",
+        "column_break_2",
+        "is_encrypted",
+        "retention_policy"
+    ],
+    "fields": [
+        {
+            "fieldname": "asset_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Asset Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "doctype_name",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "DocType",
+            "options": "DocType",
+            "reqd": 1
+        },
+        {
+            "fieldname": "field_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Field Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "classification",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Classification Level",
+            "options": "\nPublic\nInternal\nPersonal Data\nSensitive Personal Data",
+            "reqd": 1
+        },
+        {
+            "fieldname": "data_category",
+            "fieldtype": "Link",
+            "label": "Data Category",
+            "options": "Personal Data Category"
+        },
+        {
+            "fieldname": "details_section",
+            "fieldtype": "Section Break",
+            "label": "Processing Details"
+        },
+        {
+            "fieldname": "processing_purpose",
+            "fieldtype": "Small Text",
+            "label": "Processing Purpose"
+        },
+        {
+            "fieldname": "storage_location",
+            "fieldtype": "Data",
+            "label": "Storage Location"
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "is_encrypted",
+            "fieldtype": "Check",
+            "label": "Is Encrypted",
+            "default": "0"
+        },
+        {
+            "fieldname": "retention_policy",
+            "fieldtype": "Link",
+            "label": "Retention Policy",
+            "options": "Retention Policy"
+        }
+    ],
+    "links": [],
+    "modified": "2026-02-27 07:25:00.000000",
+    "modified_by": "Administrator",
+    "module": "DPDP Compliance",
+    "name": "Data Asset",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "read": 1,
+            "role": "System Manager",
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "read": 1,
+            "role": "DPO Manager",
+            "write": 1
+        },
+        {
+            "read": 1,
+            "role": "Compliance Viewer",
+            "write": 0
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

@@ -1,0 +1,23 @@
+{%- block head_include %}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="csrf-token" content="{{ csrf_token }}" />
+<title>DPDP Privacy Portal</title>
+{%- endblock %}
+
+{%- block page_content %}
+<div id="dpdp-portal-app"></div>
+
+<noscript>
+    <p style="padding: 2rem; text-align: center;">
+        JavaScript is required to use the Privacy Portal.
+        Please enable JavaScript in your browser settings.
+    </p>
+</noscript>
+
+<script>
+    // Inject CSRF token for Frappe API calls
+    window.__FRAPPE_BOOT__ = window.__FRAPPE_BOOT__ || {};
+    window.__FRAPPE_BOOT__.csrf_token = "{{ csrf_token }}";
+</script>
+{%- endblock %}

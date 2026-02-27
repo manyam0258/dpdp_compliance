@@ -1,0 +1,197 @@
+{
+    "actions": [],
+    "autoname": "format:DSR-{YYYY}-{#####}",
+    "creation": "2026-02-27 07:25:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "is_submittable": 1,
+    "track_changes": 1,
+    "field_order": [
+        "user",
+        "request_type",
+        "description",
+        "column_break_1",
+        "status",
+        "received_on",
+        "sla_deadline",
+        "hours_until_breach",
+        "verification_section",
+        "identity_verified",
+        "verification_method",
+        "otp_token",
+        "assignment_section",
+        "assigned_to",
+        "resolution_section",
+        "resolution_notes",
+        "rejection_reason",
+        "nomination_section",
+        "nominee_name",
+        "nominee_email",
+        "nominee_relationship"
+    ],
+    "fields": [
+        {
+            "fieldname": "user",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "User",
+            "options": "User",
+            "reqd": 1
+        },
+        {
+            "fieldname": "request_type",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Request Type",
+            "options": "Access\nCorrection\nErasure\nNomination\nGrievance",
+            "reqd": 1
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Text",
+            "label": "Description",
+            "reqd": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Status",
+            "options": "Open\nID Verified\nProcessing\nCompleted\nRejected",
+            "default": "Open"
+        },
+        {
+            "fieldname": "received_on",
+            "fieldtype": "Datetime",
+            "label": "Received On",
+            "default": "Now",
+            "read_only": 1
+        },
+        {
+            "fieldname": "sla_deadline",
+            "fieldtype": "Datetime",
+            "in_list_view": 1,
+            "label": "SLA Deadline",
+            "read_only": 1
+        },
+        {
+            "fieldname": "hours_until_breach",
+            "fieldtype": "Float",
+            "label": "Hours Until SLA Breach",
+            "read_only": 1
+        },
+        {
+            "fieldname": "verification_section",
+            "fieldtype": "Section Break",
+            "label": "Identity Verification"
+        },
+        {
+            "fieldname": "identity_verified",
+            "fieldtype": "Check",
+            "label": "Identity Verified",
+            "default": "0",
+            "read_only": 1
+        },
+        {
+            "fieldname": "verification_method",
+            "fieldtype": "Select",
+            "label": "Verification Method",
+            "options": "\nOTP\nEmail\nDirigLocker\nManual",
+            "read_only": 1
+        },
+        {
+            "fieldname": "otp_token",
+            "fieldtype": "Data",
+            "label": "OTP Token",
+            "hidden": 1,
+            "read_only": 1
+        },
+        {
+            "fieldname": "assignment_section",
+            "fieldtype": "Section Break",
+            "label": "Assignment"
+        },
+        {
+            "fieldname": "assigned_to",
+            "fieldtype": "Link",
+            "label": "Assigned To",
+            "options": "User"
+        },
+        {
+            "fieldname": "resolution_section",
+            "fieldtype": "Section Break",
+            "label": "Resolution"
+        },
+        {
+            "fieldname": "resolution_notes",
+            "fieldtype": "Text",
+            "label": "Resolution Notes"
+        },
+        {
+            "fieldname": "rejection_reason",
+            "fieldtype": "Text",
+            "label": "Rejection Reason",
+            "depends_on": "eval:doc.status=='Rejected'"
+        },
+        {
+            "fieldname": "nomination_section",
+            "fieldtype": "Section Break",
+            "label": "Nomination Details",
+            "depends_on": "eval:doc.request_type=='Nomination'"
+        },
+        {
+            "fieldname": "nominee_name",
+            "fieldtype": "Data",
+            "label": "Nominee Name"
+        },
+        {
+            "fieldname": "nominee_email",
+            "fieldtype": "Data",
+            "label": "Nominee Email",
+            "options": "Email"
+        },
+        {
+            "fieldname": "nominee_relationship",
+            "fieldtype": "Data",
+            "label": "Nominee Relationship"
+        }
+    ],
+    "links": [],
+    "modified": "2026-02-27 07:25:00.000000",
+    "modified_by": "Administrator",
+    "module": "DPDP Compliance",
+    "name": "Data Subject Request",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 0,
+            "read": 1,
+            "role": "System Manager",
+            "submit": 1,
+            "write": 1,
+            "cancel": 1
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "read": 1,
+            "role": "DPO Manager",
+            "submit": 1,
+            "write": 1,
+            "cancel": 1
+        },
+        {
+            "read": 1,
+            "role": "Compliance Viewer",
+            "write": 0
+        }
+    ],
+    "sort_field": "received_on",
+    "sort_order": "DESC"
+}

@@ -1,0 +1,121 @@
+{
+    "actions": [],
+    "autoname": "format:PN-{####}",
+    "creation": "2026-02-27 07:25:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "is_submittable": 1,
+    "field_order": [
+        "notice_id",
+        "version",
+        "column_break_1",
+        "effective_date",
+        "is_active",
+        "language",
+        "content_section",
+        "content_html",
+        "purposes_section",
+        "purposes"
+    ],
+    "fields": [
+        {
+            "fieldname": "notice_id",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Notice ID",
+            "read_only": 1
+        },
+        {
+            "fieldname": "version",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Version",
+            "reqd": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "effective_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Effective Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "is_active",
+            "fieldtype": "Check",
+            "in_list_view": 1,
+            "label": "Is Active",
+            "default": "1"
+        },
+        {
+            "fieldname": "language",
+            "fieldtype": "Link",
+            "label": "Language",
+            "options": "Language",
+            "default": "en"
+        },
+        {
+            "fieldname": "content_section",
+            "fieldtype": "Section Break",
+            "label": "Notice Content"
+        },
+        {
+            "fieldname": "content_html",
+            "fieldtype": "Text Editor",
+            "label": "Content (HTML)",
+            "reqd": 1
+        },
+        {
+            "fieldname": "purposes_section",
+            "fieldtype": "Section Break",
+            "label": "Linked Consent Purposes"
+        },
+        {
+            "fieldname": "purposes",
+            "fieldtype": "Table",
+            "label": "Purposes",
+            "options": "Privacy Notice Consent Purpose",
+            "reqd": 1
+        }
+    ],
+    "links": [],
+    "modified": "2026-02-27 07:25:00.000000",
+    "modified_by": "Administrator",
+    "module": "DPDP Compliance",
+    "name": "Privacy Notice",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 0,
+            "read": 1,
+            "role": "System Manager",
+            "submit": 1,
+            "write": 1,
+            "amend": 1,
+            "cancel": 1
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "read": 1,
+            "role": "DPO Manager",
+            "submit": 1,
+            "write": 1,
+            "amend": 1,
+            "cancel": 1
+        },
+        {
+            "read": 1,
+            "role": "Compliance Viewer",
+            "write": 0
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

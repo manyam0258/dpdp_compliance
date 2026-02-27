@@ -1,0 +1,239 @@
+{
+    "actions": [],
+    "creation": "2026-02-27 07:25:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "organization_section",
+        "company_name",
+        "dpdp_registration_no",
+        "act_commencement_date",
+        "is_sdf",
+        "column_break_org",
+        "fiduciary_classification",
+        "dpo_section",
+        "dpo_name",
+        "dpo_email",
+        "dpo_phone",
+        "column_break_dpo",
+        "grievance_url",
+        "irt_section",
+        "irt_emails",
+        "sla_section",
+        "default_sla_days",
+        "column_break_sla",
+        "financial_retention_days",
+        "consent_section",
+        "consent_modal_enabled",
+        "digilocker_section",
+        "digilocker_enabled",
+        "digilocker_client_id",
+        "column_break_digi",
+        "digilocker_client_secret",
+        "audit_section",
+        "last_audit_date",
+        "column_break_audit",
+        "next_audit_date"
+    ],
+    "fields": [
+        {
+            "fieldname": "organization_section",
+            "fieldtype": "Section Break",
+            "label": "Organization Details"
+        },
+        {
+            "fieldname": "company_name",
+            "fieldtype": "Data",
+            "label": "Company Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "dpdp_registration_no",
+            "fieldtype": "Data",
+            "label": "DPDP Registration No"
+        },
+        {
+            "fieldname": "act_commencement_date",
+            "fieldtype": "Date",
+            "label": "Act Commencement Date"
+        },
+        {
+            "fieldname": "is_sdf",
+            "fieldtype": "Check",
+            "label": "Is Significant Data Fiduciary",
+            "default": "0"
+        },
+        {
+            "fieldname": "column_break_org",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "fiduciary_classification",
+            "fieldtype": "Select",
+            "label": "Fiduciary Classification",
+            "options": "\nData Fiduciary\nSignificant Data Fiduciary\nState",
+            "default": "Data Fiduciary"
+        },
+        {
+            "fieldname": "dpo_section",
+            "fieldtype": "Section Break",
+            "label": "Data Protection Officer"
+        },
+        {
+            "fieldname": "dpo_name",
+            "fieldtype": "Data",
+            "label": "DPO Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "dpo_email",
+            "fieldtype": "Data",
+            "label": "DPO Email",
+            "options": "Email",
+            "reqd": 1
+        },
+        {
+            "fieldname": "dpo_phone",
+            "fieldtype": "Data",
+            "label": "DPO Phone",
+            "options": "Phone"
+        },
+        {
+            "fieldname": "column_break_dpo",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "grievance_url",
+            "fieldtype": "Data",
+            "label": "Grievance Portal URL",
+            "options": "URL"
+        },
+        {
+            "fieldname": "irt_section",
+            "fieldtype": "Section Break",
+            "label": "Incident Response Team"
+        },
+        {
+            "fieldname": "irt_emails",
+            "fieldtype": "Small Text",
+            "label": "IRT Email Addresses",
+            "description": "Comma-separated email addresses of Incident Response Team members"
+        },
+        {
+            "fieldname": "sla_section",
+            "fieldtype": "Section Break",
+            "label": "SLA & Retention"
+        },
+        {
+            "fieldname": "default_sla_days",
+            "fieldtype": "Int",
+            "label": "Default DSR SLA (Days)",
+            "default": "30",
+            "description": "Default SLA for Data Subject Requests in days"
+        },
+        {
+            "fieldname": "column_break_sla",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "financial_retention_days",
+            "fieldtype": "Int",
+            "label": "Financial Retention (Days)",
+            "default": "2920",
+            "description": "Retention period for financial records (default 8 years for GST Act §36)"
+        },
+        {
+            "fieldname": "consent_section",
+            "fieldtype": "Section Break",
+            "label": "Consent"
+        },
+        {
+            "fieldname": "consent_modal_enabled",
+            "fieldtype": "Check",
+            "label": "Enable Consent Modal on Signup",
+            "default": "1"
+        },
+        {
+            "fieldname": "digilocker_section",
+            "fieldtype": "Section Break",
+            "label": "DigiLocker Integration (VPC)"
+        },
+        {
+            "fieldname": "digilocker_enabled",
+            "fieldtype": "Check",
+            "label": "Enable DigiLocker Verification",
+            "default": "0"
+        },
+        {
+            "fieldname": "digilocker_client_id",
+            "fieldtype": "Data",
+            "label": "DigiLocker Client ID",
+            "depends_on": "digilocker_enabled"
+        },
+        {
+            "fieldname": "column_break_digi",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "digilocker_client_secret",
+            "fieldtype": "Password",
+            "label": "DigiLocker Client Secret",
+            "depends_on": "digilocker_enabled"
+        },
+        {
+            "fieldname": "audit_section",
+            "fieldtype": "Section Break",
+            "label": "Audit"
+        },
+        {
+            "fieldname": "last_audit_date",
+            "fieldtype": "Date",
+            "label": "Last Audit Date"
+        },
+        {
+            "fieldname": "column_break_audit",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "next_audit_date",
+            "fieldtype": "Date",
+            "label": "Next Audit Date"
+        }
+    ],
+    "issingle": 1,
+    "links": [],
+    "modified": "2026-02-27 07:25:00.000000",
+    "modified_by": "Administrator",
+    "module": "DPDP Compliance",
+    "name": "DPDP Settings",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 0,
+            "email": 1,
+            "print": 1,
+            "read": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 0,
+            "delete": 0,
+            "read": 1,
+            "role": "DPO Manager",
+            "write": 1
+        },
+        {
+            "create": 0,
+            "delete": 0,
+            "read": 1,
+            "role": "Compliance Viewer",
+            "write": 0
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

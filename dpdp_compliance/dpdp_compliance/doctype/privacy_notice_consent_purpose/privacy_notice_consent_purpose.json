@@ -1,0 +1,39 @@
+{
+    "actions": [],
+    "creation": "2026-02-27 07:25:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "istable": 1,
+    "field_order": [
+        "consent_purpose",
+        "is_mandatory"
+    ],
+    "fields": [
+        {
+            "fieldname": "consent_purpose",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Consent Purpose",
+            "options": "Consent Purpose",
+            "reqd": 1
+        },
+        {
+            "fieldname": "is_mandatory",
+            "fieldtype": "Check",
+            "in_list_view": 1,
+            "label": "Is Mandatory",
+            "default": "0",
+            "read_only": 1,
+            "fetch_from": "consent_purpose.is_mandatory"
+        }
+    ],
+    "links": [],
+    "modified": "2026-02-27 07:25:00.000000",
+    "modified_by": "Administrator",
+    "module": "DPDP Compliance",
+    "name": "Privacy Notice Consent Purpose",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC"
+}

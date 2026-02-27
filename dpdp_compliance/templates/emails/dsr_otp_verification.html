@@ -1,0 +1,18 @@
+<h3>Verify Your Identity — Data Subject Request</h3>
+
+<p>We received a <strong>{{ request_type }}</strong> request ({{ dsr_name }}) on your behalf.</p>
+
+<p>To verify your identity and proceed with this request, please use the following OTP:</p>
+
+<div style="text-align: center; margin: 24px 0;">
+    <span
+        style="font-size: 32px; font-weight: bold; letter-spacing: 8px; padding: 16px 32px; background: #f5f7fa; border-radius: 8px; border: 2px solid #d1d8dd;">
+        {{ otp }}
+    </span>
+</div>
+
+<p style="color: #6c757d; font-size: 14px;">
+    This OTP is valid for <strong>{{ valid_minutes }} minutes</strong>. Do not share it with anyone.
+</p>
+
+<p>If you did not make this request, you can safely ignore this email.</p>

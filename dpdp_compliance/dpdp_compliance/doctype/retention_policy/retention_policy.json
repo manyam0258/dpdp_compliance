@@ -1,0 +1,135 @@
+{
+    "actions": [],
+    "autoname": "format:RP-{####}",
+    "creation": "2026-02-27 07:25:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "policy_name",
+        "data_category",
+        "column_break_1",
+        "is_active",
+        "retention_section",
+        "doctype_name",
+        "date_field",
+        "column_break_2",
+        "retention_days",
+        "override_erasure",
+        "legal_section",
+        "legal_basis",
+        "action_on_expiry"
+    ],
+    "fields": [
+        {
+            "fieldname": "policy_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Policy Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "data_category",
+            "fieldtype": "Link",
+            "label": "Data Category",
+            "options": "Personal Data Category"
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "is_active",
+            "fieldtype": "Check",
+            "in_list_view": 1,
+            "label": "Is Active",
+            "default": "1"
+        },
+        {
+            "fieldname": "retention_section",
+            "fieldtype": "Section Break",
+            "label": "Retention Configuration"
+        },
+        {
+            "fieldname": "doctype_name",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Target DocType",
+            "options": "DocType",
+            "reqd": 1
+        },
+        {
+            "fieldname": "date_field",
+            "fieldtype": "Data",
+            "label": "Date Field",
+            "reqd": 1,
+            "description": "Fieldname to use for retention date calculation (e.g., posting_date, creation)"
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "retention_days",
+            "fieldtype": "Int",
+            "in_list_view": 1,
+            "label": "Retention Period (Days)",
+            "reqd": 1
+        },
+        {
+            "fieldname": "override_erasure",
+            "fieldtype": "Check",
+            "label": "Override Erasure (Flag for Review)",
+            "default": "0",
+            "description": "If checked, records past retention will be flagged for DPO review instead of auto-anonymized"
+        },
+        {
+            "fieldname": "legal_section",
+            "fieldtype": "Section Break",
+            "label": "Legal Basis"
+        },
+        {
+            "fieldname": "legal_basis",
+            "fieldtype": "Small Text",
+            "label": "Legal Basis",
+            "description": "Legal requirement for this retention period (e.g., GST Act §36)"
+        },
+        {
+            "fieldname": "action_on_expiry",
+            "fieldtype": "Select",
+            "label": "Action on Expiry",
+            "options": "\nAnonymize\nDelete\nFlag for Review",
+            "default": "Anonymize"
+        }
+    ],
+    "links": [],
+    "modified": "2026-02-27 07:25:00.000000",
+    "modified_by": "Administrator",
+    "module": "DPDP Compliance",
+    "name": "Retention Policy",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "read": 1,
+            "role": "System Manager",
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "read": 1,
+            "role": "DPO Manager",
+            "write": 1
+        },
+        {
+            "read": 1,
+            "role": "Compliance Viewer",
+            "write": 0
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

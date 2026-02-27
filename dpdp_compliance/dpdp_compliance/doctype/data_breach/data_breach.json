@@ -1,0 +1,224 @@
+{
+    "actions": [],
+    "autoname": "format:BR-{YYYY}-{#####}",
+    "creation": "2026-02-27 07:25:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "is_submittable": 1,
+    "track_changes": 1,
+    "field_order": [
+        "breach_id",
+        "breach_title",
+        "column_break_1",
+        "severity",
+        "breach_type",
+        "timeline_section",
+        "detection_time",
+        "reporting_deadline",
+        "column_break_tl",
+        "hours_remaining",
+        "status",
+        "details_section",
+        "nature_of_breach",
+        "data_categories",
+        "systems_affected",
+        "impact_section",
+        "affected_users_count",
+        "likely_consequences",
+        "column_break_impact",
+        "affected_users_file",
+        "response_section",
+        "remedial_actions",
+        "assigned_irt_lead",
+        "reporting_section",
+        "reported_to_dpb_on",
+        "dpb_submission_ref",
+        "column_break_rpt",
+        "principal_notification_sent"
+    ],
+    "fields": [
+        {
+            "fieldname": "breach_id",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Breach ID",
+            "read_only": 1,
+            "unique": 1
+        },
+        {
+            "fieldname": "breach_title",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Breach Title",
+            "reqd": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "severity",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Severity",
+            "options": "Critical\nHigh\nMedium\nLow",
+            "reqd": 1
+        },
+        {
+            "fieldname": "breach_type",
+            "fieldtype": "Select",
+            "label": "Breach Type",
+            "options": "\nUnauthorized Access\nData Exfiltration\nRansomware\nAccidental Disclosure\nInsider Threat\nPhysical Loss"
+        },
+        {
+            "fieldname": "timeline_section",
+            "fieldtype": "Section Break",
+            "label": "Timeline"
+        },
+        {
+            "fieldname": "detection_time",
+            "fieldtype": "Datetime",
+            "in_list_view": 1,
+            "label": "Detection Time",
+            "reqd": 1
+        },
+        {
+            "fieldname": "reporting_deadline",
+            "fieldtype": "Datetime",
+            "label": "DPB Reporting Deadline",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_tl",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "hours_remaining",
+            "fieldtype": "Float",
+            "label": "Hours Remaining",
+            "read_only": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "label": "Status",
+            "options": "Detected\nAssessing\nContained\nReported to DPB\nPrincipals Notified\nClosed",
+            "default": "Detected"
+        },
+        {
+            "fieldname": "details_section",
+            "fieldtype": "Section Break",
+            "label": "Breach Details"
+        },
+        {
+            "fieldname": "nature_of_breach",
+            "fieldtype": "Text",
+            "label": "Nature of Breach",
+            "reqd": 1
+        },
+        {
+            "fieldname": "data_categories",
+            "fieldtype": "Small Text",
+            "label": "Data Categories Affected"
+        },
+        {
+            "fieldname": "systems_affected",
+            "fieldtype": "Small Text",
+            "label": "Systems Affected"
+        },
+        {
+            "fieldname": "impact_section",
+            "fieldtype": "Section Break",
+            "label": "Impact Assessment"
+        },
+        {
+            "fieldname": "affected_users_count",
+            "fieldtype": "Int",
+            "label": "Number of Affected Users"
+        },
+        {
+            "fieldname": "likely_consequences",
+            "fieldtype": "Text",
+            "label": "Likely Consequences"
+        },
+        {
+            "fieldname": "column_break_impact",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "affected_users_file",
+            "fieldtype": "Attach",
+            "label": "Affected Users CSV"
+        },
+        {
+            "fieldname": "response_section",
+            "fieldtype": "Section Break",
+            "label": "Response"
+        },
+        {
+            "fieldname": "remedial_actions",
+            "fieldtype": "Text",
+            "label": "Remedial Actions Taken"
+        },
+        {
+            "fieldname": "assigned_irt_lead",
+            "fieldtype": "Link",
+            "label": "Assigned IRT Lead",
+            "options": "User"
+        },
+        {
+            "fieldname": "reporting_section",
+            "fieldtype": "Section Break",
+            "label": "DPB Reporting"
+        },
+        {
+            "fieldname": "reported_to_dpb_on",
+            "fieldtype": "Datetime",
+            "label": "Reported to DPB On",
+            "read_only": 1
+        },
+        {
+            "fieldname": "dpb_submission_ref",
+            "fieldtype": "Data",
+            "label": "DPB Submission Reference"
+        },
+        {
+            "fieldname": "column_break_rpt",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "principal_notification_sent",
+            "fieldtype": "Check",
+            "label": "Principals Notified",
+            "default": "0",
+            "read_only": 1
+        }
+    ],
+    "links": [],
+    "modified": "2026-02-27 07:25:00.000000",
+    "modified_by": "Administrator",
+    "module": "DPDP Compliance",
+    "name": "Data Breach",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 0,
+            "read": 1,
+            "role": "DPO Manager",
+            "submit": 1,
+            "write": 1,
+            "cancel": 1
+        },
+        {
+            "create": 0,
+            "delete": 0,
+            "read": 1,
+            "role": "System Manager",
+            "write": 0
+        }
+    ],
+    "sort_field": "detection_time",
+    "sort_order": "DESC"
+}
