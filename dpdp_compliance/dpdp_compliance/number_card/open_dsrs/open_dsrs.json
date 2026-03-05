@@ -1,0 +1,23 @@
+{
+ "creation": "2026-03-05 11:24:41.969754",
+ "currency": "INR",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Data Subject Request",
+ "filters_json": "[[\"Data Subject Request\",\"status\",\"not in\",[\"Completed\",\"Rejected\"]]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Open DSRs",
+ "modified": "2026-03-05 11:24:41.969754",
+ "modified_by": "api_admin@test.in",
+ "module": "DPDP Compliance",
+ "name": "Open DSRs",
+ "owner": "api_admin@test.in",
+ "report_function": "Sum",
+ "show_full_number": 0,
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}
