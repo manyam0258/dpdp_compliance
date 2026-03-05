@@ -118,3 +118,12 @@ user_data_fields = [
         "partial": 1,
     },
 ]
+# Fixtures
+# --------
+fixtures = [
+    {"doctype": "Desktop Icon", "filters": [["name", "in", ("DPDP Compliance",)]]},
+    {"doctype": "Workspace", "filters": [["name", "in", ("DPDP Compliance",)]]},
+    {"doctype": "Workspace Sidebar", "filters": [["name", "in", ("DPDP Compliance",)]]},
+    {"doctype": "Number Card", "filters": [["module", "=", "DPDP Compliance"]]},
+    {"doctype": "Dashboard Chart", "filters": [["module", "=", "DPDP Compliance"]]},
+]
