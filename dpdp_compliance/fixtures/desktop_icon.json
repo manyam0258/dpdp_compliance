@@ -6,7 +6,7 @@
         "doctype": "Desktop Icon",
         "hidden": 0,
         "icon": null,
-        "icon_image": "/private/files/dpdp_logo.svg",
+        "icon_image": "/files/dpdp_logo.svg",
         "icon_type": "Link",
         "label": "DPDP Compliance",
         "link": null,
@@ -31,7 +31,6 @@
                 "role": "Compliance Viewer"
             }
         ],
-        "sidebar": "DPDP",
         "standard": 1
     }
 ]
